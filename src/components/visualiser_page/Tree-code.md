@@ -1,0 +1,157 @@
+# Binary Search Tree (BST) Code
+
+> BST is a data structure that spreads out like a tree. The first element of the tree is known as the `root`. In a BST,
+> values that are smaller than the root are on the left side of the root, which are refereed as `leftChild`.
+> Values that are greater or equal to the root are on the right side of the root, which are refereed as `rightChild`.
+
+The plain structure of BST would like this.
+
+```java:BST.java
+class BST{
+    public class Node {
+        private Node leftChild;
+        private Node rightChild;
+        private int value;
+
+        public Node(int value) {
+            this.value = value;
+        }
+
+    // The following method is optional
+    // This method is to look at the node values clearly while debugging.
+
+        @Override
+        public String toString() {
+            return "Value = " + value;
+        }
+    }
+
+    private Node root;
+
+    /*
+    * leftChild, rightChild, root are private because you don't want to access them outside of
+    * the class.
+    * You can make getter which is a very good practice if you want to read private variables
+    */
+
+
+    public void insert(int value);
+
+    public boolean find(int value);
+
+    public int height()
+
+}
+```
+
+**In this case**, Node is the structure of each node that's _inside_ the tree. `value` is the data that's inside of the node, and
+`leftChild` is a pointer that holds the heap location of the node that is on on the left side of the root node. Similarly,
+`rightChild` is a pointer that holds the heap location of the node that is on the right side of the root node.
+
+Lets look at `insert` Method:
+
+```JAVA:insert.java
+
+/*
+ * Time: O(log n)
+ * Space: O(1)
+ */
+
+    public void insert(int value) {
+        Node node = new Node(value);
+
+        // When there is no root, the node becomes the root
+
+        if (root == null) {
+            root = node;
+            return;
+        }
+
+        Node current = root;
+        while (true) {
+
+         // Checking if the value is less than or greater than the current
+
+            if (value < current.value) {
+
+            // When the leftChild of current node is null, the new node is placed over there
+
+                if (current.leftChild == null) {
+                    current.leftChild = node;
+                    break;
+                }
+                current = current.leftChild;
+            } else {
+
+            // When the rightChild of current node is null, the new node is places over there
+
+                if (current.rightChild == null) {
+                    current.rightChild = node;
+                    break;
+                }
+                current = current.rightChild;
+            }
+        }
+    }
+```
+
+Initially the method checks if the root is empty and adds the node as the `root` if it is empty. Otherwise, taking the `root` as `current` we
+traverse the tree either on the left side (when the `value` is less than root value) or on the right side (when the `value` is greater or equal
+to root value). When right place found by traversing, the node gets added to the left or right depending on the value it is.
+
+Lets look at `find` Method:
+
+```JAVA:find.java
+/*
+ * Time: O(log n)
+ * Space: O(1)
+ */
+
+// This method is to check if a particular value is present in the tree
+
+    public boolean find(int value) {
+        Node current = root;
+        while (current != null) {
+
+            if (value == current.value)
+                return true;
+
+            else if (value > current.value)
+                current = current.rightChild;
+
+            else if (value < current.value)
+                current = current.leftChild;
+        }
+        return false;
+    }
+```
+
+`find` method works similarly to the `insert` method. It iterates from the root and checks if the value lies on left side or
+right side and returns true when the `current` value equals to `value`.
+
+Lets look at `height` Method:
+
+```JAVA:height.java
+
+/*
+ * Time: O(n)
+ * Space: O(1)
+ */
+
+// Method overloading
+
+    public int height() {
+        return height(root);
+    }
+
+    private int height(Node root) {
+        // Base condition
+        if (root == null)
+            return 0;
+
+        return 1 + Math.max(height(root.leftChild), height(root.rightChild));
+    }
+```
+
+In this method, we keep calling the method again and again and when we reach a **null** we will return 0 and stop the recursion.
+Then compare the max of left and right subtree, which ever is greater, thats the height of the tree.

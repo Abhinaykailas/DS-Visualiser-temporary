@@ -1,0 +1,106 @@
+.nav__bar {
+  /* padding-left: 1em;
+  padding-right: 1em;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row; */
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 2em;
+  z-index: 1000;
+  /* background-color: #4285f4; */
+  background-color: #5600e8;
+}
+
+.nav__text {
+  color: beige;
+  text-decoration: none;
+}
+
+.nav__text:hover {
+  color: aqua;
+}
+
+/* .nav__container { */
+  /* display: flex; */
+  /* justify-content: space-around; */
+/* } */
+
+ul {
+  width: 8em;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  /* text-decoration: none; */
+}
+
+/* .nav__bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 56px;
+    z-index: 1000;
+    background-color: #5600e8;
+  }
+  
+  .nav__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 56px;
+    width: 100%;
+    max-width: 1100px;
+  }
+  
+  .logo__text {
+    text-decoration: none;
+    color: white;
+    font-size: 1.5rem;
+    padding: 0px;
+  }
+  
+  .logo__text :hover {
+    background-color: #5600e8;
+    color: #fff;
+  }
+  
+  .menu__icon {
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  
+  .nav__menu {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center !important;
+    list-style: none;
+    width: 60vw;
+    margin: 0;
+  }
+  
+  .nav__item {
+    margin: 0px 10px;
+  }
+  
+  .nav__item :hover {
+    background-color: whitesmoke;
+    border-radius: 4px;
+    color: #13274f;
+  }
+  
+  .nav__link {
+    text-decoration: none;
+    color: white;
+    font-size: 1.1rem;
+    padding: 5px;
+    font-family: "Inter", sans-serif;
+  }
+  
+  .menu__icon {
+    display: none;
+  } */

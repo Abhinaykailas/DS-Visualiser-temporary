@@ -1,0 +1,103 @@
+.form__container {
+    /* display: flex; */
+    /* flex-wrap: wrap; */
+    /* flex-direction: row; */
+    align-items: center;
+    /* justify-content: center; */
+    margin-top: 3%;
+    outline-color: aqua;
+    outline-style:groove;
+    border-radius: 0.5em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    margin-left: 5em;
+    margin-right: 5em;
+}
+
+input {
+    border-radius: 0.5em;
+}
+
+.form__element {
+    /* align-items: center; */
+    /* padding-left: 19em; */
+    text-align: center;
+}
+
+.form__button {
+    width: fit-content;
+    background-color: aqua;
+    border-radius: 0.5em;
+    color: white;
+    padding: 0.5em;
+    text-align: center;
+    text-decoration: none;
+    /* display: flex; */ /* Don't use flex. */
+    font-size: 0.5em;
+    text-align: center;
+    align-items: center;
+}
+
+
+
+
+/* 
+@import url("https://fonts.googleapis.com/css2?family=Lobster+Two:wght@700&family=Nunito:wght@400;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@1,300&display=swap");
+
+@layer components {
+  .btn {
+    @apply border-2 rounded px-3 transition py-1 border-gray-500;
+  }
+
+  body {
+    @apply bg-gray-900 bg-gradient-to-tl from-gray-800;
+  }
+
+  .blog blockquote {
+    @apply relative before:w-1 before:h-full before:rounded-tl before:rounded-bl before:bg-white before:absolute  my-3;
+  }
+
+  .blog blockquote p {
+    @apply text-gray-400;
+  }
+
+  p {
+    @apply my-2;
+  }
+
+  .blog h1 {
+    @apply text-blue-500 text-4xl md:text-5xl  2xl:text-7xl pb-3;
+  }
+  .blog h2 {
+    @apply text-3xl text-blue-500 md:text-4xl  2xl:text-6xl;
+  }
+  .blog h3 {
+    @apply text-2xl text-blue-500 md:text-3xl  2xl:text-4xl;
+  }
+  .blog strong {
+    @apply text-blue-600;
+  }
+  .blog > * {
+    @apply text-base w-[85%] md:text-lg xl:text-xl leading-[1.6rem] md:leading-[1.8rem] xl:leading-[2rem] text-gray-100;
+  }
+
+  .blog pre code {
+    @apply text-base text-gray-300 px-2 py-2 font-normal after:content-[''] before:content-[''];
+  }
+
+  .blog pre {
+    @apply bg-gray-800 bg-gradient-to-br px-3 w-full py-4 to-gray-700;
+  }
+  .blog code {
+    @apply px-1 py-[0.5px];
+  }
+
+  .blog code {
+    @apply after:content-['\`'] before:content-['\`'] before:text-blue-500 after:text-blue-500 text-blue-400 font-bold;
+  }
+
+  .blog {
+    @apply flex items-center flex-col;
+  }
+} */

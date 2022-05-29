@@ -1,0 +1,35 @@
+class BST{
+    public class Node {
+        private Node leftChild;
+        private Node rightChild;
+        private int value;
+
+        public Node(int value) {
+            this.value = value;
+        }
+
+    // The following method is optional
+    // This method is to look at the node values clearly while debugging.
+
+        @Override
+        public String toString() {
+            return "Value = " + value;
+        }
+    }
+
+    private Node root;
+
+    /*
+    * leftChild, rightChild, root are private because you don't want to access them outside of
+    * the class.
+    * You can make getter which is a very good practice if you want to read private variables
+    */
+
+
+    public void insert(int value);
+
+    public boolean find(int value);
+
+    public int height()
+
+}
