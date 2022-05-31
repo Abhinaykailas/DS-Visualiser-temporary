@@ -1,7 +1,8 @@
 import React from "react"
 import styles from "./Visualiser.module.css";
-import { useState } from 'react';
+import { useState,  useEffect } from 'react';
 import { useForm } from 'react-hook-form';
+import BinarySeachTree from "../algos/BinaryTreeInsertion";
 // import { FormField } from 'react-form-input-fields';
 
 function Visualiser() {
@@ -10,9 +11,17 @@ function Visualiser() {
 
   const { handleSubmit, register } = useForm();
 
-  const onSubmitted = (obj) => {
-    console.log(obj);
+  let obj
+
+  useEffect(() => {
+    obj = new BinarySeachTree() 
+  }, []) // once the page is loaded, this function will be called everytime.
+
+  const onSubmitted = (val) => {
+    obj.insert(val)
+    console.log(obj.root)
   }
+
 
 // const Visualiser = () => {
   return (
